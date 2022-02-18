@@ -145,6 +145,14 @@ Use `type` to get a hint about how the variable might need to be dealt with
     Out[75]: ['Burp Suite Professional', '2022', '1.1']
 
 
+# Security
+
+The py4j interface that allows your Python scripts to interface with Burp via this extension is bound to TCP port 25333 on the localhost (127.0.0.1) interface.
+
+When the extension loads in Burp, that port will start listening for incoming connections - these connections are not authenticated by default. I have also not enabled the supported [token based authentication](https://www.py4j.org/advanced_topics.html#authentication) because any token I hard code in will be visible in the source code available here as well as in any example Python code for interacting with the extension. However, if you wanted to enable this in your own custom build of the extension, with your own chosen token, you have the option to do so by following the example in the link.
+
+Anything that can connect to this port can do anything that a connected Python install can do, including adding stuff to your Burp session, and retrieving any information in the Burp session. If there are any vulnerabilities found in the py4j communication protocol/service, then these could also affect the extension as well. [Its Java, dont think it can't happen](https://logging.apache.org/log4j/2.x/security.html). That being said, if bad actors are able to arbitrarily communicate with local TCP ports on your system, you likely already have some problems you need to fix.
+
 
 # Building the Burp extension
 
