@@ -46,6 +46,7 @@ You can get the proxy history at the current point in time:
 
 You can then get the contents of the request and response for a particular numbered entry `no` in the proxy history
 
+    no = 1
     entry = proxyhistory[no-1]
 
 
