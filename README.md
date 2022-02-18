@@ -41,12 +41,12 @@ To get you thinking, here are some simple specific examples.
 
 You can get the proxy history at the current point in time:
 
-    ph = callbacks.getProxyHistory()
+    proxyhistory = callbacks.getProxyHistory()
     
 
 You can then get the contents of the request and response for a particular numbered entry `no` in the proxy history
 
-    entry = ph[no-1]
+    entry = proxyhistory[no-1]
 
 
 Get the raw request and response from that entry
