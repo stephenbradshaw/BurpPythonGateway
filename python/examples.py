@@ -10,7 +10,7 @@ callbacks = gateway.entry_point
 helpers = callbacks.getHelpers()
 
 # sitemap
-sm = callbacks.getSiteMap('h')
+sm = callbacks.getSiteMap('')
 
 # out of scope host names
 set([a.getHost() for a in sm if not callbacks.isInScope(a.getUrl())])
@@ -41,16 +41,4 @@ for entry in ssm:
 
 # request types of in scope items
 set([a.getRequest().split(b' ')[0].decode('utf8') for a in ssm])
-
-# data
-
-# URL parameters
-
-# unusual request types (not GET, HEAD, POST)
-
-# unusual headers
-
-
-
-
 
