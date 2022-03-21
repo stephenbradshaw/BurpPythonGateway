@@ -160,4 +160,10 @@ You can build the .jar version of the extension to load into Burp using the foll
 
     mvn clean package
 
+For simplicity, you can also use the maven official docker container to build the .jar extension with the following command.
+
+```
+docker run -it --rm --name BurpPythonGateway -v "$(pwd)":/usr/src/mymaven -w /usr/src/mymaven maven:3.3-jdk-8 mvn clean package
+```
+
 The compiled extension file will be created under `target/` - the jar file with `-with-dependencies` in the name is the one you load into Burp.
