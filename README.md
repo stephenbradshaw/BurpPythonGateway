@@ -170,5 +170,5 @@ The compiled extension file will be created under `target/` - the jar file with 
 
 # Grab the release
 
-If you dont want to compile your own copy of the extension, grab the latest compiled release from the Releases section.
+If you dont want to compile your own copy of the extension, grab the latest compiled release from the [Releases](https://github.com/stephenbradshaw/BurpPythonGateway/releases) section of this repository.
 
