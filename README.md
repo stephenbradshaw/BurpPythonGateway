@@ -167,3 +167,8 @@ docker run -it --rm --name BurpPythonGateway -v "$(pwd)":/usr/src/mymaven -w /us
 ```
 
 The compiled extension file will be created under `target/` - the jar file with `-with-dependencies` in the name is the one you load into Burp.
+
+# Grab the release
+
+If you dont want to compile your own copy of the extension, grab the latest compiled release from the Releases section.
+
